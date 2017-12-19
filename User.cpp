@@ -18,3 +18,13 @@ bool User::addTime(TimeInterval time, int dayOfWeek){
 		return true;
 	}
 }
+
+bool User::operator==(const User& rhs) const{
+	if(rhs == nullptr){
+		return false;
+	}
+	if(this->name == rhs.name){
+		return true;
+	}
+	return false;
+}

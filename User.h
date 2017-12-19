@@ -1,5 +1,5 @@
-#ifndef USER_H
-#define USER_H
+#ifndef USER_H_
+#define USER_H_
 
 #include <vector>
 #include <string>
@@ -13,6 +13,8 @@ class User{
 		User(std::string name);
 		bool addTime( TimeInterval time, int dayOfWeek);
 		bool deleteTime( TimeInterval time, int dayOfWeek);
+
+		bool operator==(const User& rhs) const;
 
 };
 
