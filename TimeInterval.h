@@ -14,10 +14,10 @@ private:
 public:
 	TimeInterval(int startHour, int startMin, int endHour, int endMin);
 	void adjustTime( int startHour, int startMin, int endHour, int endMin);
-	int getStartHour();
-	int getStartMin();
-	int getEndHour();
-	int getEndMin();
+	int getStartHour() const;
+	int getStartMin() const;
+	int getEndHour() const;
+	int getEndMin() const;
 	
 	bool operator==(const TimeInterval& rhs) const;
 };

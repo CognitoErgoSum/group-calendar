@@ -6,7 +6,7 @@ User::User(std::string name){
 
 bool User::addTime(TimeInterval time, int dayOfWeek){
 	bool exists;
-	for( int i = 0; i < availableTimes[dayOfWeek].size(); i++){
+	for(unsigned int i = 0; i < availableTimes[dayOfWeek].size(); i++){
 		if( availableTimes[dayOfWeek][i] == time){
 			exists = true;
 		}
@@ -20,9 +20,6 @@ bool User::addTime(TimeInterval time, int dayOfWeek){
 }
 
 bool User::operator==(const User& rhs) const{
-	if(rhs == nullptr){
-		return false;
-	}
 	if(this->name == rhs.name){
 		return true;
 	}

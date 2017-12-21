@@ -21,26 +21,23 @@ void TimeInterval::adjustTime( int startHour, int startMin, int endHour, int end
 	endMin = endMin;
 }
 
-int TimeInterval::getStartHour(){
+int TimeInterval::getStartHour() const{
 	return startHour;
 }
 
-int TimeInterval::getStartMin(){
+int TimeInterval::getStartMin() const{
 	return startMin;
 }
 
-int TimeInterval::getEndHour(){
+int TimeInterval::getEndHour() const{
 	return endHour;
 }
 
-int TimeInterval::getEndMin(){
+int TimeInterval::getEndMin() const{
 	return endMin;
 }
 
 bool TimeInterval::operator==(const TimeInterval& rhs) const{
-	if(rhs == nullptr){
-		return false;
-	}
 	if(this->getStartHour() == rhs.getStartHour() &&
 		this->getStartMin() == rhs.getStartMin() &&
 		this->getEndHour() == rhs.getEndHour() &&
